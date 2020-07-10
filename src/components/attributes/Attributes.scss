@@ -1,0 +1,81 @@
+@import "../../Constants.scss";
+
+.addgroupmodal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .formbg {
+    width: 40vw;
+    padding: 20px 30px;
+    background: $light-color;
+    border-radius: 10px;
+    animation-name: modalopen;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+
+    .form {
+      .form-group {
+        label {
+          font-size: 0.9rem;
+        }
+
+        &:last-child {
+          margin-top: 20px;
+          margin-bottom: 0.1rem;
+        }
+      }
+
+
+    }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        color: $myocean;
+      }
+
+
+    }
+
+    .close {
+      margin-right: 8px;
+      color: $mymainred;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .addgroupmodal {
+    .formbg {
+      width: 80vw;
+    }
+  }
+}
+
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: scale(0);
+
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+
+
+  }
+}

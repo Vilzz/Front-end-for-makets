@@ -1,0 +1,298 @@
+@import "../../Constants.scss";
+
+.limiter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 36px;
+}
+
+.mypagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  nav {
+    .pagination {
+      .page-item.active {
+
+
+        .page-link {
+          color: #fff;
+          background-color: $myocean;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: $mysky;
+            color: #fff;
+          }
+        }
+      }
+
+      .page-item i,
+      .page-item .page-link {
+        color: $myocean;
+
+        &:hover {
+          color: $mysky;
+        }
+      }
+    }
+  }
+}
+
+.thead-div {
+
+  padding: 10px 15px;
+  background-color: $mydarkgrey;
+  color: #fff;
+}
+
+.tbody-div {
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 2px 15px;
+  font-size: 0.9rem;
+}
+
+.inner-div {
+  background-color: $myocean;
+  color: #fff;
+}
+
+.inner-div,
+.items-div {
+  font-size: 0.8rem;
+}
+
+.my-hr {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.inner-wrapper {
+  display: none;
+  animation-name: opendetails;
+  animation-duration: 0.4s;
+}
+
+.total-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 80px;
+  margin-bottom: 15px;
+}
+
+.new {
+  background-color: #f8f8e5;
+}
+
+.finished {
+  background-color: #e2ffed;
+}
+
+.production {
+  background-color: #d9f0f7;
+}
+
+.canceled {
+  background-color: #fce1e1;
+}
+
+.sent {
+  background-color: #e4e2ff;
+}
+
+.payed {
+  background-color: #b4b4b4;
+}
+
+.addressrow {
+  h5 {
+    span {
+      color: $mymainred;
+      font-size: 1rem;
+      margin-left: 10px;
+    }
+  }
+
+}
+
+.address {
+  h5 {
+    span {
+      margin-left: 7px;
+    }
+  }
+}
+
+.usernav {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.links {
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+
+    .nav-item {
+      margin-right: 20px;
+
+      i {
+        margin-right: 5px;
+      }
+
+      a {
+        &:hover {
+          color: $mymainred;
+        }
+      }
+
+    }
+  }
+}
+
+.mynavbar {
+  width: 100%;
+  border-bottom: 2px solid $dark-green;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  ul {
+    margin-bottom: 0;
+    list-style-type: none;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 15px;
+
+  small {
+    font-size: 0.7rem;
+  }
+
+  &:hover {
+    color: $danger-color;
+  }
+
+  &:hover .dropdown-content {
+    display: block;
+  }
+
+  .list-group-item {
+    padding: 5px 20px 5px 20px;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(20, 75, 67, 0.2);
+  z-index: 2;
+  animation-name: dropdownopen;
+  animation-duration: 0.3s;
+
+  small {
+    margin-top: -3px;
+    display: block;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+}
+
+
+.dropdown .list-group-item:hover {
+  background-color: $myocean;
+  color: $light-color;
+}
+
+.dropdown .list-group-item {
+  padding: 10px 20px 5px 20px;
+}
+
+
+.addmaketflex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  form {
+    width: 48%
+  }
+
+  .formresult {
+    width: 48%;
+  }
+
+  h2 {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: $myocean;
+
+  }
+}
+
+@keyframes opendetails {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dropdownopen {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.profiledata {
+  .group-item h6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #cacaca;
+    border-radius: 4px;
+    padding: 6px 20px;
+
+    small {
+      margin-left: 30px;
+    }
+  }
+}
+
+.component {
+  h5 {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}

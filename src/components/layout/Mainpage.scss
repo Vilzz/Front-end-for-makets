@@ -1,0 +1,80 @@
+@import "../../Constants.scss";
+
+.mainpage {
+  position: relative;
+  background: url("../../img/milkway.jpg") no-repeat center center/cover;
+  height: 100vh;
+
+
+  .mainpageoverlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mainpageinner {
+    height: 100%;
+
+    .onmain {
+      color: white;
+      height: 90vh;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+    }
+
+    .lead {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      max-width: 60%;
+
+    }
+  }
+
+  .buttons {
+    a:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+.basketcount {
+
+  position: relative;
+
+  .badge {
+    background-color: $mymainred;
+    position: absolute;
+    top: -6px;
+    right: 0;
+    padding-bottom: 5px;
+
+
+  }
+}
+
+.notfound-text {
+  margin-top: 120px;
+  color: $mymainred;
+}
+
+@media (max-width: 700px) {
+  .mainpage {
+    .mainpageinner {
+      .lead {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        max-width: 90%;
+
+      }
+    }
+  }
+}

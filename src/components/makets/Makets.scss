@@ -1,0 +1,217 @@
+@import "../../Constants.scss";
+
+.cardview {
+  width: 100%;
+
+  .card-body {
+    padding: 20px 30px 0 30px;
+  }
+
+  .card-text {
+    margin-bottom: 2px;
+    line-height: 1.2;
+    font-size: 0.9rem;
+  }
+
+
+
+  span {
+    color: $myocean;
+    float: right;
+  }
+
+  .card-description {
+    padding: 3px 10px;
+    background-color: $light-color;
+    border-radius: 7px;
+    margin-top: 10px;
+
+    h6 {
+      text-align: left;
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+
+    }
+
+    p {
+      line-height: 1.2;
+      font-size: 0.85rem;
+      color: $mydarkgrey;
+      font-style: italic;
+
+      &:first-letter {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .card-footer {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    .btn {
+      margin-right: 20px;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+    }
+
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+.filter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-bottom: 3px;
+}
+
+.viewtoggle {
+  margin-top: 10px;
+  color: $myocean;
+  display: flex;
+  flex-direction: row;
+
+  .tableview,
+  .cardview {
+    height: 60px;
+    font-size: 0.9rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    .popup {
+      border-radius: 5px;
+      background-color: $myocean;
+      color: #fff;
+      padding: 2px 10px;
+      font-size: 12px;
+      position: absolute;
+      left: 10;
+      top: 0;
+      display: none;
+      animation-name: popupopen;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-in-out;
+    }
+
+    .btn {
+
+      &:focus,
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    i {
+      font-size: 1.6rem;
+      color: $myocean;
+    }
+
+    &:hover .popup {
+      display: block;
+    }
+
+    &:hover i {
+      color: $mysky;
+    }
+  }
+}
+
+.editimageblock {
+
+  img,
+  .btn {
+    width: 200px;
+  }
+
+}
+
+.bd {
+  border: 1px solid #000;
+}
+
+@media (max-width: 700px) {
+  .component {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    h2 {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .btn {
+      margin-bottom: 20px;
+    }
+  }
+
+  .editimageblock {
+
+    img,
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .actionpanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+    .filter {
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5px;
+      margin-left: 0;
+    }
+  }
+
+  .viewtoggle {
+
+    .tableview,
+    .cardview {
+      align-items: flex-end;
+      justify-content: center;
+
+    }
+  }
+
+  .cardview {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .cardfooter {
+      .btn {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@keyframes popupopen {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

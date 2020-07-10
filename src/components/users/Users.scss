@@ -1,0 +1,67 @@
+@import "../../Constants.scss";
+
+.userlist {
+  li {
+    padding: 5px 10px;
+
+    &:first-child {
+      width: 3vw;
+    }
+
+    &:nth-child(2) {
+      width: 14vw;
+    }
+
+    &:nth-child(3) {
+      width: 16vw;
+    }
+
+    &:nth-child(4) {
+      width: 14vw;
+    }
+
+    &:nth-child(5) {
+      width: 14vw;
+    }
+
+    &:nth-child(6) {
+      width: 10vw;
+    }
+
+    &:last-child {
+      width: 12vw;
+    }
+
+  }
+
+  .bg-mydark {
+    color: $textlight-color;
+  }
+}
+
+@media (max-width: 700px) {
+  .userlist {
+    flex-direction: column;
+
+    li {
+
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:last-child {
+        width: 80vw;
+      }
+
+      padding-left: 100px;
+      text-align: left;
+    }
+  }
+
+  .list-group {
+    margin-bottom: 30px;
+  }
+
+}

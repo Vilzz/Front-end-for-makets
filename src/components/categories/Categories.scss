@@ -1,0 +1,37 @@
+@import "../../Constants.scss";
+
+.ctglist {
+  li {
+    padding: 5px 10px;
+    width: 50%;
+
+    &:first-child {
+      width: 15%;
+    }
+
+    &:nth-child(3) {
+      width: 20%;
+    }
+
+    &:last-child {
+      width: 15%;
+    }
+  }
+
+  .bg-mydark {
+    color: $textlight-color;
+  }
+}
+
+.flexhelper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 20px;
+}
+
+@media (max-width: 700px) {
+  .flexhelper {
+    justify-content: center;
+  }
+}
